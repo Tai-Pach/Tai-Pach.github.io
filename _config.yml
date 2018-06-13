@@ -1,0 +1,25 @@
+title: Taino Pacheco
+tagline: Blog | Projects | Code 
+
+author:
+  name:  Taino Pacheco
+  email: pacheco.taino@gmail.com
+  twitter: tai_pach
+  github: tai-pach
+  
+include: ['_pages']
+  
+layout: post
+permalink: /:categories/:title/
+
+url: http://tai-pach.github.io
+
+markdown: kramdown
+markdown_ext:  markdown,mkdown,mkdn,mkd,md
+
+kramdown:
+  auto_ids: true
+  input: GFM
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
