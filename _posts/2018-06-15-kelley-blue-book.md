@@ -2,11 +2,11 @@
 title: "Kelley Blue Book Project"
 layout: post
 categories: R
-output: html_document
+output: kramdown
 featured_image: /images/projects/kbb.png
 ---
 
-##Introduction
+## Introduction ####
 When you purchase a brand new car, the manufacturer's suggested retail price, the MSRP, is predetermined.   But when you sell your car, and ownership of the vehicle changes hands, how do you determine what the car is worth?  Most likely you go Kelley Book or CarFax to get an appraisal of your car.   There are many factors that contribute to a car's value, from mileage to engine type.  In this project I will show you how you can estimate a car's worth from data gathered from scratch! The workflow looks like this:
 
   1. Scrape Kelley Blue Book's used car listings using a Python scripts
@@ -15,14 +15,14 @@ When you purchase a brand new car, the manufacturer's suggested retail price, th
   4. Exploratory Data Analysis
   5. Designing a predictive model
   
-##Part I: Collecting The Data
+## Part I: Collecting The Data ####
 For any data scientist enthusiast, web scraping is a valuable.  Most of the time  data scientists work with prepared datasets: Perhaps they are supplied by employers, clients, or by dataset hosts like Kaggle.  But for the ever curious data scientist, collecting unstructured data can be a worthwhile venture.  Scraping the web for data can be tricky but Scrapy, a Python based program, makes the process much easier.  Here I will show you how to scrape KBB.com for used car listings.
 
 ```r
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-###How Scrapy Works
+## How Scrapy Works ####
 Scrapy allows you to program a bot (i.e. a Python script) that collects whatever data you want from a webpage.  Although I won't go in to depth about all the code a Scrapy bot requires, I will outline key points in Scrapy bot design.
 
 1.  Initialize a Scrapy bot directory
@@ -167,7 +167,7 @@ ITEM_PIPELINES = {
 That's it! Now navigate to your Python command line and enter: ```scrapy crawl <name of spider>```
 The spider bot will begin to crawl the site, collect the items you specified, and save them in a predetermined format in the root of your project directory!
 
-##Part II: Cleaning the Data
+## Part II: Cleaning the Data ####
 When you finish your scraping chances are the data will not be ready for exploration.  Here are some of the issues I had to address before I began my EDA.
 
   1. Removing spaces, tabs, symbols, etc. from my data
@@ -178,12 +178,12 @@ When you finish your scraping chances are the data will not be ready for explora
   6. Filling blank columns with 'NA'
   
 
-##Part III: Feature Engineering
+## Part III: Feature Engineering ####
 Feature engineering involves creating new columns of data from existing features.  For example: Taking a column of U.S. states and making a new column called Regions based off the states location, so that Connecticut would have the value "Northeast"" and Oregon would be "Northwest".
 
 I did not employ feature engineering for this project but I may in the future
 
-##Part IV: Exploratory Data Analysis
+## Part IV: Exploratory Data Analysis ####
 ```r
 library(data.table)
 library(highcharter)
@@ -228,7 +228,7 @@ xda::charSummary(df)
 ```
 Here we see that the Honda Civic LX Sedan is the most frequent make and model being sold.  "Charcoal"" is the most frequent car color, "6-Speed Shiftable Automatic" is the most frequent transmission and so on.
 
-###Brand and Car Body Break Down
+## Brand and Car Body Break Down ####
 Now that we have collected about 17,000 used car details from KBB.com, let's see what brands dominate used car listings.
 
 ```r
@@ -245,7 +245,7 @@ hchart(body_count, "treemap", hcaes(x = body, value = count, color = count, heig
 ```
 Sedan and Sport Utility vehicles are very frequent in used car listings.  
 
-###Customer Reviews vs KBB Expert Reviews
+## Customer Reviews vs KBB Expert Reviews ####
 Let's take a look at how ratings between car owners and Kelley Blue Book experts differ.
 
 ```r
@@ -254,14 +254,14 @@ hchart(density(na.omit(df$consumer_review)), type = "area", color = "#B71C1C", n
 
 Here we can see that consumers are a little more lenient in how they rate a car and will give a car higher marks while experts seem to be more critical.
 
-###How Mileage Affects Price
+## How Mileage Affects Price ####
 ```r
 mileage_price = df %>% select(., mileage, price, body) %>% filter(., body =="Sedan"|body =="Sport Utility")
 hchart(mileage_price, "scatter", hcaes(x = mileage, y = price, group=body)) %>% hc_title(., text = "How Mileage Affects Price for Sedans and Sport Utility Vehicles")  %>% hc_add_theme(hc_theme_db())
 ```
 Just as we would expect, as a car's mileage increases its price decreases. Convertibles, coupes and luxury vehicles make up most of our outliers and they are skewing the data.  For that reason, I chose to exclude them and only include the most frequent body types being sold: Sedans and Sport Utility Vehicles.
 
-###Price, Mileage and Year Distributions
+## Price, Mileage and Year Distributions ####
 ```r
 hchart(df$price, name = "Price") %>% hc_title(., text = "Price Distribution")  %>% hc_add_theme(hc_theme_db())
 ```
