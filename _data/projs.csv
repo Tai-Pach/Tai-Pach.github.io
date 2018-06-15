@@ -1,5 +1,5 @@
 name,category,url,code,imgurl,f
-highcharter,r-package,http://jkunst.com/highcharter,http://github.com/jbkunst/highcharter,/images/projects/highcharter.jpg,f
+Kelley Blue Book,r Project,http://tai-pach.github.io/kbb,https://github.com/Tai-Pach/kbb/,/images/projects/kbb.png,f
 rchess,r-package,http://jkunst.com/rchess,http://github.com/jbkunst/rchess,/images/projects/rchess.jpg,f
 d3wordcloud,r-package,http://rpubs.com/jbkunst/133106,http://github.com/jbkunst/d3wordcloud,/images/projects/jbkunst-d3wordcloud.png,f
 riskr,r-package,http://jkunst.com/riskr/,https://github.com/jbkunst/riskr,/images/projects/riskr.jpg,f
