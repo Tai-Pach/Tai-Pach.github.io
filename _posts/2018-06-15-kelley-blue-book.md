@@ -18,7 +18,7 @@ When you purchase a brand new car, the manufacturer's suggested retail price, th
 ##Part I: Collecting The Data
 For any data scientist enthusiast, web scraping is a valuable.  Most of the time  data scientists work with prepared datasets: Perhaps they are supplied by employers, clients, or by dataset hosts like Kaggle.  But for the ever curious data scientist, collecting unstructured data can be a worthwhile venture.  Scraping the web for data can be tricky but Scrapy, a Python based program, makes the process much easier.  Here I will show you how to scrape KBB.com for used car listings.
 
-```{r setup, include=FALSE}
+```r
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -33,7 +33,7 @@ Scrapy allows you to program a bot (i.e. a Python script) that collects whatever
     . This script tells the bot what elements of a website you want to scrape
     . For this project I want to scrape the details about the used car that is being listed
 
-```
+```python
 import scrapy
 
 
@@ -56,7 +56,7 @@ class KbbItem(scrapy.Item):
 3.  Setup the "Spider.py" script
     . This is the brain of the bot.  The Spider script essentially "crawls" the webpage and collects the data you assigned in       the Items script.  This is a hefty script!  I will save the explanation of this code for a blog post.
     
-```
+```python
 from scrapy import Spider, Request
 from kbb.items import KbbItem
 import re
@@ -124,7 +124,7 @@ class kbbSpider(Spider):
 4.  Setup the "pipelines.py" script
     . This script tells the bot how you want to save the data it collects.  CSV format? Text file? It's up to you!
     
-```
+```python
 from scrapy.exceptions import DropItem
 from scrapy.exporters import CsvItemExporter
 
@@ -153,7 +153,7 @@ class KbbPipeline(object):
 5. Setup the "settings.py" script
     . This script controls the settings of the bot like how fast should the bot scrape. You can change these settings here.
     
-```
+```python
 BOT_NAME = 'kbb'
 SPIDER_MODULES = ['kbb.spiders']
 NEWSPIDER_MODULE = 'kbb.spiders'
@@ -184,7 +184,7 @@ Feature engineering involves creating new columns of data from existing features
 I did not employ feature engineering for this project but I may in the future
 
 ##Part IV: Exploratory Data Analysis
-```{r kbb, echo=F, message=FALSE, warning=FALSE}
+```r
 library(data.table)
 library(highcharter)
 library(dplyr)
@@ -193,14 +193,14 @@ df = fread('C:/Users/pache_000/Desktop/kbb/kbb_used_final_3.csv')
 ```
 
 A preview of the dataset:
-```{r}
+```r
 head(df)
 ```
 
 And now the fun part: Seeing what insights the data holds
 one of my favorite R packages for EDA is "XDA".  Let's use the ```numSummary()``` function to get statistical information on our numerical features
 
-```{r}
+```r
 library(xda)
 
 numSummary(df)
@@ -223,7 +223,7 @@ This function is very useful for detecting the amount of outliers in a feature.
 
 The less useful charSummary() function can provide us some insight into charater-type features.
 
-```{r}
+```r
 xda::charSummary(df)
 ```
 Here we see that the Honda Civic LX Sedan is the most frequent make and model being sold.  "Charcoal"" is the most frequent car color, "6-Speed Shiftable Automatic" is the most frequent transmission and so on.
@@ -231,14 +231,14 @@ Here we see that the Honda Civic LX Sedan is the most frequent make and model be
 ###Brand and Car Body Break Down
 Now that we have collected about 17,000 used car details from KBB.com, let's see what brands dominate used car listings.
 
-```{r echo= FALSE}
+```r
 brand_count = df %>% select(., brand) %>% group_by(., brand) %>% summarise(., count = n())
 
 hchart(brand_count, "treemap", hcaes(x = brand, value = count, color = count, height = 1080)) %>% hc_title(., text= "Brand Treemap")
 ```
 Of all the cars I collected (your results may vary), the most frequent brands were Ford, Chevy, Toyota and Honda.
 
-```{r echo= FALSE}
+```r
 body_count = df %>% select(., body) %>% group_by(., body) %>% summarise(., count = n())
 
 hchart(body_count, "treemap", hcaes(x = body, value = count, color = count, height = 1080)) %>% hc_title(., text= "Car Body Treemap")
@@ -248,34 +248,34 @@ Sedan and Sport Utility vehicles are very frequent in used car listings.
 ###Customer Reviews vs KBB Expert Reviews
 Let's take a look at how ratings between car owners and Kelley Blue Book experts differ.
 
-```{r echo= FALSE}
+```r
 hchart(density(na.omit(df$consumer_review)), type = "area", color = "#B71C1C", name = "Consumer Review")%>% hc_add_series(density(na.omit(df$kbb_expert_review)), area = TRUE, name = "KBB Expert Review") %>% hc_add_theme(hc_theme_db()) %>% hc_title(., text = "Customer Ratings vs Expert Ratings")
 ```
 
 Here we can see that consumers are a little more lenient in how they rate a car and will give a car higher marks while experts seem to be more critical.
 
 ###How Mileage Affects Price
-```{r echo= FALSE}
+```r
 mileage_price = df %>% select(., mileage, price, body) %>% filter(., body =="Sedan"|body =="Sport Utility")
 hchart(mileage_price, "scatter", hcaes(x = mileage, y = price, group=body)) %>% hc_title(., text = "How Mileage Affects Price for Sedans and Sport Utility Vehicles")  %>% hc_add_theme(hc_theme_db())
 ```
 Just as we would expect, as a car's mileage increases its price decreases. Convertibles, coupes and luxury vehicles make up most of our outliers and they are skewing the data.  For that reason, I chose to exclude them and only include the most frequent body types being sold: Sedans and Sport Utility Vehicles.
 
 ###Price, Mileage and Year Distributions
-```{r echo= FALSE}
+```r
 hchart(df$price, name = "Price") %>% hc_title(., text = "Price Distribution")  %>% hc_add_theme(hc_theme_db())
 ```
 
 Most cars are priced between \$11k to \$13k.  There is a substantial drop of in cars valued over \$15k.  Some luxury vehicles selling over $450,000 are outliers and need to be removed for predictive modelling.  (*Try zooming in*)   
 
-```{r, echo= FALSE}
+```r
 hchart(df$mileage, name = "Mileage") %>% hc_title(., text = "Mileage Distribution")  %>% hc_add_theme(hc_theme_db())
 ```
 
 Most cars have mileages between 15,000-30,000 miles.    
 
 
-```{r, echo=FALSE}
+```r
 hchart(df$year, name = "Year") %>% hc_title(., text = "Car Year Built Distribution")  %>% hc_add_theme(hc_theme_db())
 ```
 
