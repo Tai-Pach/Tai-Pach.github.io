@@ -3,7 +3,7 @@ title: "Kelley Blue Book Project"
 layout: post
 categories: R
 output: kramdown
-featured_image: /images/projects/kbb.png
+featured_image: /images/projects/kbb.jpg
 ---
 
 ## Introduction ####
