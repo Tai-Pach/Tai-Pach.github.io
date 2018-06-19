@@ -53,14 +53,14 @@ $(function () {
         tooltip: {
             formatter: function() {
                     info = {
-                        "Studies I": "Mathematics degree at PUC",
-                        "Studies II": "Master in Statistics at PUC",
-                        "Scoring Analyst": "at Corpbanca",
-                        "Risk Analyst": "at Equifax Chile",
-                        "Senior Analyst": "at Foris",
-                        "Senior Scoring Analyst": "at Scotiabank",
-                        "Senior Data Scientist": "at Coopeuch",
-                        "Part-time StatDev": "at Chess.com"
+                        "Studies I": "Biomolecular Sciences degree at CCSU",
+                        "Studies II": "Master in Biomolecular Sciences at CCSU",
+                        "Research Assistant": "Simpson Healthcare Executives",
+                        "Quality Control Technician": "Scapa Tapes North America",
+                        "Microbiology Laboratory Technician": "Northeast Labs",
+                        "Quality Control/Assurance": "Carla's Pasta",
+                        "Data Science Fellow": "NYC Data Science Academy"
+                        
                     };
                     
                     date_format = Highcharts.dateFormat('%Y - %B', new Date(this.x));
@@ -69,14 +69,14 @@ $(function () {
             }
         },
         series: [
-            { name: "Studies I",              data: [ [Date.UTC(2004, 3, 1), 1], [Date.UTC(2007,11, 1), 1], ] },
-            { name: "Studies II",             data: [ [Date.UTC(2008, 3, 1), 2], [Date.UTC(2009,11, 1), 2], ] },
-            { name: "Scoring Analyst",        data: [ [Date.UTC(2010, 8, 1), 3], [Date.UTC(2011, 2, 1), 3], ] },
-            { name: "Risk Analyst",           data: [ [Date.UTC(2011, 2, 1), 4], [Date.UTC(2013, 1, 1), 4], ] },
-            { name: "Senior Data Scientist",  data: [ [Date.UTC(2013, 1, 1), 5], [Date.UTC(2014, 8, 1), 5], ] },
-            { name: "Senior Scoring Analyst", data: [ [Date.UTC(2014, 8, 1), 6], [Date.UTC(2016, 8, 1), 6], ] },
-            { name: "Senior Data Scientist",  data: [ [Date.UTC(2016, 9, 1), 7], [Date.UTC(new Date().getFullYear(),  new Date().getMonth(), 1), 7], ]},
-            { name: "Part-time StatDev",                data: [ [Date.UTC(2017, 3, 1), 8], [Date.UTC(new Date().getFullYear(),  new Date().getMonth(), 1), 8], ]}
+            { name: "Studies I",              data: [ [Date.UTC(2007, 8, 1), 1], [Date.UTC(2011,8, 1), 1], ] },
+            { name: "Studies II",             data: [ [Date.UTC(2012, 7, 1), 2], [Date.UTC(2013,12, 1), 2], ] },
+            { name: "Research Assistant",     data: [ [Date.UTC(2014, 9, 1), 3], [Date.UTC(2015, 12, 1), 3], ] },
+            { name: "Quality Control Technician",           data: [ [Date.UTC(2015, 12, 1), 4], [Date.UTC(2016, 8, 1), 4], ] },
+            { name: "Microbiology Laboratory",data: [ [Date.UTC(2016, 8, 1), 5], [Date.UTC(2017, 8, 1), 5], ] },
+            { name: "Quality Control/Assurance", data: [ [Date.UTC(2017, 8, 1), 6], [Date.UTC(2018, 1, 1), 6], ] },
+            { name: "Data Science Fellow",  data: [ [Date.UTC(2016, 9, 1), 7], [Date.UTC(new Date().getFullYear(),  new Date().getMonth(), 1), 7], ]}
+            
         ]
     };
 
