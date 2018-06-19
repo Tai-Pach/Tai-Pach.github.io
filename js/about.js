@@ -75,7 +75,8 @@ $(function () {
             { name: "Quality Control Technician",           data: [ [Date.UTC(2015, 12, 1), 4], [Date.UTC(2016, 8, 1), 4], ] },
             { name: "Microbiology Laboratory Technician",data: [ [Date.UTC(2016, 8, 1), 5], [Date.UTC(2017, 8, 1), 5], ] },
             { name: "Quality Control/Assurance", data: [ [Date.UTC(2017, 8, 1), 6], [Date.UTC(2018, 1, 1), 6], ] },
-            { name: "Data Science Fellow",  data: [ [Date.UTC(2018, 4, 1), 7], [Date.UTC(new Date().getFullYear(),  new Date().getMonth(), 1), 7], ]}
+            { name: "Data Science Fellow", data: [ [Date.UTC(2018, 4, 1), 6], [Date.UTC(2018, 7, 1), 6], ] }
+            // { name: "Data Science Fellow",  data: [ [Date.UTC(2018, 4, 1), 7], [Date.UTC(new Date().getFullYear(),  new Date().getMonth(), 1), 7], ]}
             
         ]
     };
