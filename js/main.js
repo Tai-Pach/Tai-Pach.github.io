@@ -8,6 +8,8 @@
 
     colors = [ //900
       "#33691E",  // green
+      "#880E4F",  // magenta
+      "#7986CB",  // blue-grey
       "#1B5E20",  // sea-green
       "#E65100",  // orange
       "#BF360C",  // coral

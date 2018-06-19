@@ -14,7 +14,7 @@
   }
   
   data = [
-    "print('Hi there!')",
+    "print('Hello!')",
     "name = 'Tai'",
     "Thanks for checking out my website!",
     ""
