@@ -6,8 +6,10 @@ output: kramdown
 featured_image: /images/ML_Workflow/ML.png
 ---
 
+This is my Machine Learning Workflow.  It delineates the processes from data cleaning to model ensembling.  This document will be updated over time.
+
 # Machine Learning Workflow
-![book.jpg](attachment:book.jpg)
+![flowchart](/images/ML-Workflow/flowchart.jpg)
 ***
 ## 1) Data Cleaning, EDA, Data Visualization
 * Before any data analysis can take place the data must be thoroughly cleaned
@@ -62,10 +64,10 @@ featured_image: /images/ML_Workflow/ML.png
             - Allows you to predefine a feature vetor size which can reduce the amount of dummy variables used to identify a feature
     - Ordinal:
         - Transform ordinal (`map()` is useful for this)
-        - Encoding Schemes *see nominal
+        - Encoding Schemes *see nominal*
            
 ## 3) Model Building
-![ml_map.png](attachment:ml_map.png)
+![ml_map](/images/ML-Workflow/ml_map.png)
 
 ## 4) Model Optimization
 
