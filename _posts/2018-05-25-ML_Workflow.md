@@ -1,7 +1,8 @@
 ---
 title: "Machine Learning Workflow"
 layout: post
-categories: python
+categories: R
+output: kramdown
 featured_image: /images/ML_Workflow/ML.png
 ---
 
