@@ -9,8 +9,8 @@ featured_image: /images/ML_Workflow/ML.png
 This is my Machine Learning Workflow.  It delineates the processes from data cleaning to model ensembling.  This document will be updated over time.
 
 # Machine Learning Workflow
-![flowchart](/images/ML-Workflow/flowchart.jpg)
-***
+![flowchart](/images/ML_Workflow/flowchart.jpg)
+
 ## 1) Data Cleaning, EDA, Data Visualization
 * Before any data analysis can take place the data must be thoroughly cleaned
 * Are all the columns of the correct data type (e.g. are numerical cells of type numeric)?
@@ -67,7 +67,7 @@ This is my Machine Learning Workflow.  It delineates the processes from data cle
         - Encoding Schemes *see nominal*
            
 ## 3) Model Building
-![ml_map](/images/ML-Workflow/ml_map.png)
+![ml_map](/images/ML_Workflow/ml_map.png)
 
 ## 4) Model Optimization
 
