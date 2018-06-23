@@ -7,7 +7,7 @@ featured_image: /images/xda/xda.png
 ---
 
 ## "XDA"-package: EDA made easy####
-One of my current favorite packages in R is "XDA".  This package allows you to get an initial glimpse at some the stats within your dataset.  You can read more about it and install it [here!](https://github.com/ujjwalkarn/xda).  In this blog, I will show you how xda works in action. 
+One of my current favorite packages in R is "XDA".  This package allows you to get an initial glimpse at some of the stats within your dataset.  You can read more about it and install it [here!](https://github.com/ujjwalkarn/xda).  In this blog, I will show you how xda works in action. 
 
 
 ## Getting Started ####
