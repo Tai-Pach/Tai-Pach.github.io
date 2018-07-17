@@ -97,7 +97,7 @@ pred            Convertible Coupe Hatchback Sedan Sport Utility Truck  Van Wagon
 
 
 
-The first 50 rows of my final table looked like this:
+The first 50 rows of my final table looked like this (predictions of the left, actual body type on the right):
 
 <iframe src="/htmlwidgets/svm/table1.html"></iframe> <a href="/htmlwidgets/svm/table1.html" target="_blank">open</a>
 
