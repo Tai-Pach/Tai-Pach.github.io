@@ -83,7 +83,6 @@ prediction = cbind(x,y)
 sum(prediction[,1]!=prediction[,2])
 ```
 The confusion matrix revealed that the most misclassifcations occured between the Hatchback and Sedan body types:
-
 			   true
 pred            Convertible Coupe Hatchback Sedan Sport Utility Truck  Van Wagon
   Convertible            98    44        13     0             1     3    0     0
@@ -98,15 +97,8 @@ pred            Convertible Coupe Hatchback Sedan Sport Utility Truck  Van Wagon
 
 
 
-The first few rows of my final table looked like this:
+The first 50 rows of my final table looked like this:
 
-|predicted   |actual   |
-|:-:|:-:|
-|Sport Utility   |Sport Utility   |
-|Sedan           |Sedan   |
-|Coupe           |Coupe   |
-|Wagon           |Sedan   |
-|Sedan           |Sedan   |
-|Sport Utility   | Van|
+<iframe src="/htmlwidgets/svm/table1.html"></iframe> <a href="/htmlwidgets/svm/table1.html" target="_blank">open</a>
 
 My SVM model was able to classify car body type using the features I selected with 85.7% accuracy
