@@ -83,6 +83,7 @@ prediction = cbind(x,y)
 sum(prediction[,1]!=prediction[,2])
 ```
 The confusion matrix revealed that the most misclassifcations occured between the Hatchback and Sedan body types:
+```
 			   true
 pred            Convertible Coupe Hatchback Sedan Sport Utility Truck  Van Wagon
   Convertible            98    44        13     0             1     3    0     0
@@ -93,7 +94,7 @@ pred            Convertible Coupe Hatchback Sedan Sport Utility Truck  Van Wagon
   Truck                   1     2         1     0            42   236    1     0
   Van                     0     0         2    15            27     2  170     3
   Wagon                   1     0        10    30            11     0    0   114
-
+```
 
 
 
