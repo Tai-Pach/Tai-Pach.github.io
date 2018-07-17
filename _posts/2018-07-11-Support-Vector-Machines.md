@@ -19,7 +19,7 @@ epsilon is a slack variable--it allows observations to fall on the wrong side of
 * if epsilon is >0 but <1 the observation violates the margin but not the hyperplane
 * if epsilon is >1 the observation violates the hyper plane
 
-C is tuning parameter--it helps govern the threshold of violations that the margin and hyperplane can tolerate.  As gamma increases, there is more budget for violations (the margin widens).  As gamma decreases, there is less budget for violations (the margin narrows)
+C is tuning parameter--it helps govern the threshold of violations that the margin and hyperplane can tolerate.  As C increases, there is more budget for violations (the margin widens).  As C decreases, there is less budget for violations (the margin narrows)
 
 The support vector classifier fails when the boundary between classes is no longer linear.  This is where support vector machines come in.  The SVM is an extension of the SVC by enlarging feature space using kernels.  A kernel is a essentially a function applied to the observations that thereby enlarge the feature space while preserving the observations relationship to one another.
 
@@ -29,8 +29,8 @@ As the complexity of a kernel increases (and affects how the hyperplane folds in
 
 Even SVMs have their limitations too: Classification becomes increasingly more computationally expensive as the number of observations increases.  You are literally having the computer calculate the dot product of all possible point pairs. Also, SVMs don't handle applications past binary classification very well.  To remedy this shortcoming, we can use 1v1 classification or 1v"All" classification.
 
-1v1:  construct a svm for each pair of features
-1vall: construct a svm for each individual feature vs all other features combined.
+* 1v1:  construct a svm for each pair of features
+* 1vall: construct a svm for each individual feature vs all other features combined.
 
 # SVM implementation in R: ####
 
