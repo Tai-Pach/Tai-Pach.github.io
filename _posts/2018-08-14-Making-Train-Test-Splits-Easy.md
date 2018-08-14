@@ -34,8 +34,8 @@ split_df= splitData(df, dataTrainRate = 0.8, seed = NULL)
 Extract dataTrain and dataTest from the split_df and save them to varibles:
 
 ```r
-splitTrain = splitedDataset$dataTrain
-splitTest = splitedDataset$dataTest
+splitTrain = split_df$dataTrain
+splitTest = split_df$dataTest
 ```
 And that's it!  Just make sure you remove the column from the testset you want to predict on. 
 
