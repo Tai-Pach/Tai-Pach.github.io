@@ -53,8 +53,8 @@ $(function () {
         tooltip: {
             formatter: function() {
                     info = {
-                        "Studies I": "Biomolecular Sciences degree at CCSU",
-                        "Studies II": "Master in Biomolecular Sciences at CCSU",
+                      //  "Studies I": "Biomolecular Sciences degree at CCSU",
+                       // "Studies II": "Master in Biomolecular Sciences at CCSU",
                         "Data Science Fellow": "NYC Data Science Academy",
                         "Teaching Assistant": "NYC Data Science Academy",
                         "Senior Business Data Analyst": "The New York Times Company"
@@ -67,8 +67,8 @@ $(function () {
             }
         },
         series: [
-            { name: "Studies I",              data: [ [Date.UTC(2007, 7, 1), 1], [Date.UTC(2011,7, 1), 1], ] },
-            { name: "Studies II",             data: [ [Date.UTC(2012, 6, 1), 2], [Date.UTC(2013,11, 1), 2], ] },
+           // { name: "Studies I",              data: [ [Date.UTC(2007, 7, 1), 1], [Date.UTC(2011,7, 1), 1], ] },
+           // { name: "Studies II",             data: [ [Date.UTC(2012, 6, 1), 2], [Date.UTC(2013,11, 1), 2], ] },
             { name: "Data Science Fellow", data: [ [Date.UTC(2018, 3, 1), 3], [Date.UTC(2018, 6, 1), 3], ] },
             { name: "Teaching Assistant", data: [ [Date.UTC(2018, 7, 1), 4], [Date.UTC(2018, 10, 1), 4], ] },
             { name: "Senior Business Data Analyst", data: [ [Date.UTC(2019, 0, 1), 5], [Date.UTC(2026, 0, 1), 5], ] }
