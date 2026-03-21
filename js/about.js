@@ -42,7 +42,7 @@ $(function () {
                 enabled: true
             },
             type: "datetime",
-            min: Date.UTC(2003,  10, 1),
+            min: Date.UTC(2017,  10, 1),
             max: Date.UTC(new Date().getFullYear(),  new Date().getMonth() + 3, 29)
         },
         plotOptions: {
