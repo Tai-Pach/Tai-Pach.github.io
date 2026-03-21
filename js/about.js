@@ -69,9 +69,9 @@ $(function () {
         series: [
             { name: "Studies I",              data: [ [Date.UTC(2007, 8, 1), 1], [Date.UTC(2011,8, 1), 1], ] },
             { name: "Studies II",             data: [ [Date.UTC(2012, 7, 1), 2], [Date.UTC(2013,12, 1), 2], ] },
-            { name: "Data Science Fellow", data: [ [Date.UTC(2018, 4, 1), 6], [Date.UTC(2018, 7, 1), 6], ] },
-            { name: "Teaching Assistant", data: [ [Date.UTC(2018, 8, 1), 6], [Date.UTC(2018, 10, 1), 6], ] },
-            { name: "Senior Business Data Analyst", data: [ [Date.UTC(2019, 1, 1), 6], [Date.UTC(2026, 1, 1), 6], ] }
+            { name: "Data Science Fellow", data: [ [Date.UTC(2018, 4, 1), 3], [Date.UTC(2018, 7, 1), 3], ] },
+            { name: "Teaching Assistant", data: [ [Date.UTC(2018, 8, 1), 4], [Date.UTC(2018, 10, 1), 4], ] },
+            { name: "Senior Business Data Analyst", data: [ [Date.UTC(2019, 1, 1), 5], [Date.UTC(2026, 1, 1), 5], ] }
             // { name: "Data Science Fellow",  data: [ [Date.UTC(2018, 4, 1), 7], [Date.UTC(new Date().getFullYear(),  new Date().getMonth(), 1), 7], ]}
             
         ]
