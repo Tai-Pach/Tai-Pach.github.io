@@ -33,7 +33,7 @@ This is my Machine Learning Workflow.  It delineates the processes from data cle
 
 * Dervied vs. Raw Features:
     - Raw Features are pulled directly from the dataset.  Example) A feature called "Boroughs of NY" might contain Manhattan, Queens, Bronx, Staten Island, and Brooklyn
-    - Derived features are computed from existing features.  Example)"Shipping Time" can be determined by subtracting the "Shipment Date" from the "Delivery Date"
+    - Derived features are computed from existing features.  Example) "Shipping Time" can be determined by subtracting the "Shipment Date" from the "Delivery Date"
     
 * Types of Derived Feature Engineering (numerical continuous):
     - Binarization (`scikit-learn` `binarizer`)
