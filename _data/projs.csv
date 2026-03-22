@@ -1,5 +1,5 @@
 name,category,url,code,imgurl,f
-Kelley Blue Book,R Projects,http://tai-pach.github.io/kbb,https://github.com/Tai-Pach/kbb/,/images/projects/kbb.jpg,f
-Kickstarter Project,R Projects,http://tai-pach.github.io/Kickstarter-Project,https://github.com/Tai-Pach/Kickstarter-Project,/images/projects/kickstarter.png,f
-Tarot Clustering Project,Python Projects,http://github.com/Tai-Pach/Tarot-Clustering-App,https://github.com/Tai-Pach/Tarot-Clustering-App,/images/projects/RWS_Tarot_00_Fool.jpg,f 
-Simple API,R Projects,https://taipach.shinyapps.io/API_1/,,/images/projects/api.png,
+Kelley Blue Book,r-package,http://tai-pach.github.io/kbb,https://github.com/Tai-Pach/kbb/,/images/projects/kbb.jpg,f
+Kickstarter Project,r-package,http://tai-pach.github.io/Kickstarter-Project,https://github.com/Tai-Pach/Kickstarter-Project,/images/projects/kickstarter.png,f
+Tarot Clustering Project,viz,http://github.com/Tai-Pach/Tarot-Clustering-App,https://github.com/Tai-Pach/Tarot-Clustering-App,/images/projects/RWS_Tarot_00_Fool.jpg,f 
+Simple API,r-package,https://taipach.shinyapps.io/API_1/,,/images/projects/api.png,
